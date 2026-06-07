@@ -120,7 +120,7 @@ async def analyze_match(update: Update, context: ContextTypes.DEFAULT_TYPE):
     try:
         # Call Claude API with web search
         response = anthropic_client.messages.create(
-            model="claude-sonnet-4-20250514",
+            model="claude-sonnet-4-6",
             max_tokens=4000,
             system=SYSTEM_PROMPT,
             tools=[
