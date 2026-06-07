@@ -146,7 +146,7 @@ async def analyze_match(update: Update, context: ContextTypes.DEFAULT_TYPE):
         # Extract text from response
         result_text = ""
         for block in response.content:
-            if hasattr(block, 'text'):
+            if hasattr(block, 'text') and block.text is not None:
                 result_text += block.text
         
         if not result_text:
